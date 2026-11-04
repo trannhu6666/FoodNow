@@ -1,0 +1,25 @@
+{
+  "Foods": {
+    "food_01": {
+      "description": "Burger bò nướng lửa hồng kẹp phô mai cheddar, khoai tây chiên giòn.",
+      "id": "food_01",
+      "imageUrl": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800",
+      "name": "Burger Bò Phô Mai",
+      "price": 85000
+    },
+    "food_02": {
+      "description": "Pizza viền phô mai với lớp xúc xích pepperoni cay nhẹ.",
+      "id": "food_02",
+      "imageUrl": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=800",
+      "name": "Pizza Pepperoni",
+      "price": 150000
+    },
+    "food_03": {
+      "description": "Gà rán giòn rụm tẩm sốt cay Hàn Quốc đậm đà.",
+      "id": "food_03",
+      "imageUrl": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800",
+      "name": "Gà Rán Cay Hàn Quốc",
+      "price": 65000
+    }
+  }
+}

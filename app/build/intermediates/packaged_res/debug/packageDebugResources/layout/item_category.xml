@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/layoutIconBg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_soft_pink_card"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivCategoryIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="Category Icon"
+            android:src="@drawable/ic_food_placeholder" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Trà sữa"
+        android:textColor="@color/text_dark"
+        android:textSize="12sp" />
+</LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "123929603496",
+    "project_id": "foodnow-5f58d",
+    "storage_bucket": "foodnow-5f58d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123929603496:android:b209b8f6304daa0edb419d",
+        "android_client_info": {
+          "package_name": "com.example.foodnow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw9zg3e-PUUHerSjwnQdO3Fgs_kDDIJ9o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

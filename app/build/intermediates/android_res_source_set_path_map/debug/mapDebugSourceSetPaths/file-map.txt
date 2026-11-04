@@ -1,0 +1,9 @@
+com.example.foodnow.app-pngs-0 /home/trannhu6666/Downloads/Android/FoodNow/app/build/generated/res/pngs/debug
+com.example.foodnow.app-res-1 /home/trannhu6666/Downloads/Android/FoodNow/app/build/generated/res/processDebugGoogleServices
+com.example.foodnow.app-updated_navigation_xml-2 /home/trannhu6666/Downloads/Android/FoodNow/app/build/generated/updated_navigation_xml/debug
+com.example.foodnow.app-packageDebugResources-3 /home/trannhu6666/Downloads/Android/FoodNow/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.example.foodnow.app-packageDebugResources-4 /home/trannhu6666/Downloads/Android/FoodNow/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.example.foodnow.app-debug-5 /home/trannhu6666/Downloads/Android/FoodNow/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.example.foodnow.app-debug-6 /home/trannhu6666/Downloads/Android/FoodNow/app/src/debug/res
+com.example.foodnow.app-main-7 /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/res
+gradleHome-0 /home/trannhu6666/.gradle

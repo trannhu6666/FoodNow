@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.foodnow.app-mergeDebugResources-43:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/home/trannhu6666/.gradle/caches/9.5.0/transforms/8144955579e7230acfe99306f13eb1a5/transformed/appcompat-1.8.0/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

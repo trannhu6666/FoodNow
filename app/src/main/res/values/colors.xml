@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_pink">#FF3366</color>
+    <color name="primary_pink_dark">#E62E5C</color>
+    <color name="soft_pink">#FFF0F3</color>
+    <color name="soft_pink_border">#FFCCD5</color>
+    <color name="coral_accent">#FF5252</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_dark">#1E1E24</color>
+    <color name="text_medium">#555555</color>
+    <color name="text_grey">#757575</color>
+    <color name="bg_light_grey">#F8F8FA</color>
+    <color name="border_grey">#E0E0E0</color>
+    <color name="status_green">#4CAF50</color>
+    <color name="green_bg">#E8F5E9</color>
+    <color name="rating_yellow">#FFC107</color>
+</resources>
