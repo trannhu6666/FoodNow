@@ -33,7 +33,7 @@
 21-->[androidx.core:core:1.18.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/bef96b72f57e5d2220216038cf16fa17/transformed/core-1.18.0/AndroidManifest.xml:26:22-94
 22
 23    <application
-23-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:6:5-39:19
+23-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:6:5-44:19
 24        android:allowBackup="true"
 24-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:7:9-35
 25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -53,226 +53,255 @@
 32-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:12:9-45
 33        android:supportsRtl="true"
 33-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:13:9-35
-34        android:testOnly="true"
-35        android:theme="@style/Theme.FoodNow" >
-35-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:14:9-45
-36        <activity
-36-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:17:9-24:20
-37            android:name="com.example.foodnow.MainActivity"
-37-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:18:13-41
-38            android:exported="true" >
-38-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:19:13-36
-39            <intent-filter>
-39-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:20:13-23:29
-40                <action android:name="android.intent.action.MAIN" />
-40-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:21:17-69
-40-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:21:25-66
-41
-42                <category android:name="android.intent.category.LAUNCHER" />
-42-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:22:17-77
-42-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:22:27-74
-43            </intent-filter>
-44        </activity>
-45        <activity
-45-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:9-76
-46            android:name="com.example.foodnow.LoginActivity"
-46-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:19-48
-47            android:exported="false" />
-47-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:49-73
-48        <activity
-48-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:9-82
-49            android:name="com.example.foodnow.EditProfileActivity"
-49-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:19-54
-50            android:exported="false" />
-50-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:55-79
-51        <activity
-51-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:9-85
-52            android:name="com.example.foodnow.SavedAddressesActivity"
-52-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:19-57
-53            android:exported="false" />
-53-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:58-82
-54        <activity
-54-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:9-81
-55            android:name="com.example.foodnow.AddAddressActivity"
-55-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:19-53
-56            android:exported="false" />
-56-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:54-78
-57        <activity
-57-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:9-85
-58            android:name="com.example.foodnow.PaymentMethodsActivity"
-58-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:19-57
-59            android:exported="false" />
-59-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:58-82
-60        <activity
-60-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:9-81
-61            android:name="com.example.foodnow.HelpCenterActivity"
-61-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:19-53
-62            android:exported="false" />
-62-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:54-78
-63        <activity
-63-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:9-79
-64            android:name="com.example.foodnow.SettingsActivity"
-64-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:19-51
-65            android:exported="false" />
-65-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:52-76
-66        <activity
-66-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:9-88
-67            android:name="com.example.foodnow.RestaurantProfileActivity"
-67-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:19-60
-68            android:exported="false" />
-68-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:61-85
-69        <activity
-69-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:9-84
-70            android:name="com.example.foodnow.ProductDetailActivity"
-70-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:19-56
-71            android:exported="false" />
-71-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:57-81
-72        <activity
-72-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:9-83
-73            android:name="com.example.foodnow.CartCheckoutActivity"
-73-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:19-55
-74            android:exported="false" />
-74-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:56-80
-75        <activity
-75-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:36:9-83
-76            android:name="com.example.foodnow.OrderSuccessActivity"
-76-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:36:19-55
-77            android:exported="false" />
-77-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:36:56-80
-78        <activity
-78-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:9-82
-79            android:name="com.example.foodnow.OrderDetailActivity"
-79-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:19-54
-80            android:exported="false" />
-80-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:55-79
-81
-82        <service
-82-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:26:9-35:19
-83            android:name="com.google.firebase.components.ComponentDiscoveryService"
-83-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:27:13-84
-84            android:directBootAware="true"
-84-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:32:13-43
-85            android:exported="false" >
-85-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:28:13-37
-86            <meta-data
-86-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:29:13-31:85
-87                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
-87-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:30:17-120
-88                android:value="com.google.firebase.components.ComponentRegistrar" />
-88-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:31:17-82
-89            <meta-data
-89-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:32:13-34:85
-90                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-90-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:33:17-109
-91                android:value="com.google.firebase.components.ComponentRegistrar" />
-91-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:34:17-82
-92            <meta-data
-92-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/8a88ab2cbe0574f80884924ac16e1355/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
-93                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-93-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/8a88ab2cbe0574f80884924ac16e1355/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
-94                android:value="com.google.firebase.components.ComponentRegistrar" />
-94-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/8a88ab2cbe0574f80884924ac16e1355/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
-95            <meta-data
-95-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
-96                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-96-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:36:17-109
-97                android:value="com.google.firebase.components.ComponentRegistrar" />
-97-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:37:17-82
-98        </service>
-99
-100        <activity
-100-->[com.google.android.gms:play-services-base:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/5a2d4e026f2f86246fcc8925ce621251/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
-101            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-101-->[com.google.android.gms:play-services-base:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/5a2d4e026f2f86246fcc8925ce621251/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-102            android:exported="false"
-102-->[com.google.android.gms:play-services-base:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/5a2d4e026f2f86246fcc8925ce621251/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-103            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-103-->[com.google.android.gms:play-services-base:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/5a2d4e026f2f86246fcc8925ce621251/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-104
-105        <provider
-105-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
-106            android:name="com.google.firebase.provider.FirebaseInitProvider"
-106-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
-107            android:authorities="com.example.foodnow.firebaseinitprovider"
-107-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
-108            android:directBootAware="true"
-108-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
-109            android:exported="false"
-109-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:27:13-37
-110            android:initOrder="100" />
-110-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:28:13-36
-111        <provider
-111-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
-112            android:name="androidx.startup.InitializationProvider"
-112-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
-113            android:authorities="com.example.foodnow.androidx-startup"
-113-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
-114            android:exported="false" >
-114-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
-115            <meta-data
-115-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
-116                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-116-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
-117                android:value="androidx.startup" />
-117-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
-118            <meta-data
-118-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/f2331f00be5462efaddd861a11377ba0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
-119                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-119-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/f2331f00be5462efaddd861a11377ba0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
-120                android:value="androidx.startup" />
-120-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/f2331f00be5462efaddd861a11377ba0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
-121            <meta-data
-121-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
-122                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-122-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
-123                android:value="androidx.startup" />
-123-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
-124        </provider>
-125
-126        <meta-data
-126-->[com.google.android.gms:play-services-basement:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/ee58aea295f006312daf174c46ddce30/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-127            android:name="com.google.android.gms.version"
-127-->[com.google.android.gms:play-services-basement:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/ee58aea295f006312daf174c46ddce30/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-128            android:value="@integer/google_play_services_version" />
-128-->[com.google.android.gms:play-services-basement:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/ee58aea295f006312daf174c46ddce30/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-129
-130        <receiver
-130-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
-131            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-131-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
-132            android:directBootAware="false"
-132-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
-133            android:enabled="true"
-133-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
-134            android:exported="true"
-134-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
-135            android:permission="android.permission.DUMP" >
-135-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
-136            <intent-filter>
-136-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
-137                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-137-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
-137-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
-138            </intent-filter>
-139            <intent-filter>
-139-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
-140                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-140-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
-140-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
-141            </intent-filter>
-142            <intent-filter>
-142-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
-143                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-143-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
-143-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
-144            </intent-filter>
-145            <intent-filter>
-145-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
-146                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-146-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
-146-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
-147            </intent-filter>
-148        </receiver>
-149    </application>
-150
-151</manifest>
+34        android:theme="@style/Theme.FoodNow" >
+34-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:14:9-45
+35        <activity
+35-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:17:9-24:20
+36            android:name="com.example.foodnow.LoginActivity"
+36-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:18:13-42
+37            android:exported="true" >
+37-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:19:13-36
+38            <intent-filter>
+38-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:20:13-23:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:21:17-69
+39-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:21:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:22:17-77
+41-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:22:27-74
+42            </intent-filter>
+43        </activity>
+44        <activity
+44-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:9-79
+45            android:name="com.example.foodnow.RegisterActivity"
+45-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:19-51
+46            android:exported="false" />
+46-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:52-76
+47        <activity
+47-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:9-74
+48            android:name="com.example.foodnow.MainActivity"
+48-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:19-47
+49            android:exported="true" />
+49-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:48-71
+50        <activity
+50-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:9-82
+51            android:name="com.example.foodnow.EditProfileActivity"
+51-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:19-54
+52            android:exported="false" />
+52-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:55-79
+53        <activity
+53-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:9-85
+54            android:name="com.example.foodnow.SavedAddressesActivity"
+54-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:19-57
+55            android:exported="false" />
+55-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:58-82
+56        <activity
+56-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:9-81
+57            android:name="com.example.foodnow.AddAddressActivity"
+57-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:19-53
+58            android:exported="false" />
+58-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:54-78
+59        <activity
+59-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:9-85
+60            android:name="com.example.foodnow.PaymentMethodsActivity"
+60-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:19-57
+61            android:exported="false" />
+61-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:58-82
+62        <activity
+62-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:9-81
+63            android:name="com.example.foodnow.HelpCenterActivity"
+63-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:19-53
+64            android:exported="false" />
+64-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:54-78
+65        <activity
+65-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:9-79
+66            android:name="com.example.foodnow.SettingsActivity"
+66-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:19-51
+67            android:exported="false" />
+67-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:52-76
+68        <activity
+68-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:9-88
+69            android:name="com.example.foodnow.RestaurantProfileActivity"
+69-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:19-60
+70            android:exported="false" />
+70-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:61-85
+71        <activity
+71-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:9-84
+72            android:name="com.example.foodnow.ProductDetailActivity"
+72-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:19-56
+73            android:exported="false" />
+73-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:57-81
+74        <activity
+74-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:36:9-83
+75            android:name="com.example.foodnow.CartCheckoutActivity"
+75-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:36:19-55
+76            android:exported="false" />
+76-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:36:56-80
+77        <activity
+77-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:9-83
+78            android:name="com.example.foodnow.OrderSuccessActivity"
+78-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:19-55
+79            android:exported="false" />
+79-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:56-80
+80        <activity
+80-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:38:9-82
+81            android:name="com.example.foodnow.OrderDetailActivity"
+81-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:38:19-54
+82            android:exported="false" />
+82-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:38:55-79
+83        <activity
+83-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:39:9-85
+84            android:name="com.example.foodnow.AdminDashboardActivity"
+84-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:39:19-57
+85            android:exported="false" />
+85-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:39:58-82
+86        <activity
+86-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:40:9-81
+87            android:name="com.example.foodnow.AdminFoodsActivity"
+87-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:40:19-53
+88            android:exported="false" />
+88-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:40:54-78
+89        <activity
+89-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:41:9-82
+90            android:name="com.example.foodnow.AdminOrdersActivity"
+90-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:41:19-54
+91            android:exported="false" />
+91-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:41:55-79
+92        <activity
+92-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:42:9-84
+93            android:name="com.example.foodnow.AdminVouchersActivity"
+93-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:42:19-56
+94            android:exported="false" />
+94-->/home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:42:57-81
+95
+96        <service
+96-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:26:9-35:19
+97            android:name="com.google.firebase.components.ComponentDiscoveryService"
+97-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:27:13-84
+98            android:directBootAware="true"
+98-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:32:13-43
+99            android:exported="false" >
+99-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:28:13-37
+100            <meta-data
+100-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:29:13-31:85
+101                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+101-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:30:17-120
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:31:17-82
+103            <meta-data
+103-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:32:13-34:85
+104                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+104-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:33:17-109
+105                android:value="com.google.firebase.components.ComponentRegistrar" />
+105-->[com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/844ea63d04c055aa1b3dc80b5c2771bc/transformed/firebase-database-20.3.0/AndroidManifest.xml:34:17-82
+106            <meta-data
+106-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/8a88ab2cbe0574f80884924ac16e1355/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
+107                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+107-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/8a88ab2cbe0574f80884924ac16e1355/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
+108                android:value="com.google.firebase.components.ComponentRegistrar" />
+108-->[com.google.firebase:firebase-common-ktx:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/8a88ab2cbe0574f80884924ac16e1355/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
+109            <meta-data
+109-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
+110                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+110-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:36:17-109
+111                android:value="com.google.firebase.components.ComponentRegistrar" />
+111-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:37:17-82
+112        </service>
+113
+114        <activity
+114-->[com.google.android.gms:play-services-base:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/5a2d4e026f2f86246fcc8925ce621251/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+115            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+115-->[com.google.android.gms:play-services-base:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/5a2d4e026f2f86246fcc8925ce621251/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+116            android:exported="false"
+116-->[com.google.android.gms:play-services-base:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/5a2d4e026f2f86246fcc8925ce621251/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+117            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+117-->[com.google.android.gms:play-services-base:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/5a2d4e026f2f86246fcc8925ce621251/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+118
+119        <provider
+119-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
+120            android:name="com.google.firebase.provider.FirebaseInitProvider"
+120-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
+121            android:authorities="com.example.foodnow.firebaseinitprovider"
+121-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
+122            android:directBootAware="true"
+122-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
+123            android:exported="false"
+123-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:27:13-37
+124            android:initOrder="100" />
+124-->[com.google.firebase:firebase-common:20.4.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0b5b11a275d9b09e40d29b6d7c64ac93/transformed/firebase-common-20.4.2/AndroidManifest.xml:28:13-36
+125        <provider
+125-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+126            android:name="androidx.startup.InitializationProvider"
+126-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+127            android:authorities="com.example.foodnow.androidx-startup"
+127-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+128            android:exported="false" >
+128-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+129            <meta-data
+129-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+130                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+130-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+131                android:value="androidx.startup" />
+131-->[androidx.emoji2:emoji2:1.3.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/87a76872afec327bfc494980cd571e94/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+132            <meta-data
+132-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/f2331f00be5462efaddd861a11377ba0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+133                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+133-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/f2331f00be5462efaddd861a11377ba0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+134                android:value="androidx.startup" />
+134-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/f2331f00be5462efaddd861a11377ba0/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+135            <meta-data
+135-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+136                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+136-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+137                android:value="androidx.startup" />
+137-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+138        </provider>
+139
+140        <meta-data
+140-->[com.google.android.gms:play-services-basement:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/ee58aea295f006312daf174c46ddce30/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+141            android:name="com.google.android.gms.version"
+141-->[com.google.android.gms:play-services-basement:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/ee58aea295f006312daf174c46ddce30/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+142            android:value="@integer/google_play_services_version" />
+142-->[com.google.android.gms:play-services-basement:18.1.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/ee58aea295f006312daf174c46ddce30/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+143
+144        <receiver
+144-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+145            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+145-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+146            android:directBootAware="false"
+146-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+147            android:enabled="true"
+147-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+148            android:exported="true"
+148-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+149            android:permission="android.permission.DUMP" >
+149-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+150            <intent-filter>
+150-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+151                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+151-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+151-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+152            </intent-filter>
+153            <intent-filter>
+153-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+154                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+154-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+154-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+155            </intent-filter>
+156            <intent-filter>
+156-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+157                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+157-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+157-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+158            </intent-filter>
+159            <intent-filter>
+159-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+160                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+160-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+160-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/fbd1c7cd1fb8dad8ec13ef2df22c01bf/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+161            </intent-filter>
+162        </receiver>
+163    </application>
+164
+165</manifest>

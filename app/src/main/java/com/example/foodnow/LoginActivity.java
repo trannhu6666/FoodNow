@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
             String password = txtPassword.getText().toString().trim();
 
             if (TextUtils.isEmpty(phone)) {
-                txtPhone.setError("Vui lòng nhập số điện thoại");
+                txtPhone.setError("Vui lòng nhập số điện thoại hoặc tên đăng nhập");
                 return;
             }
             if (TextUtils.isEmpty(password)) {
@@ -61,12 +61,8 @@ public class LoginActivity extends AppCompatActivity {
         );
 
         tvRegister.setOnClickListener(v -> {
-            boolean registered = dbHelper.registerUser("Ngọc Như", "0901234567", "123456");
-            if (registered) {
-                Toast.makeText(LoginActivity.this, "Tạo tài khoản thành công! Đăng nhập ngay", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(LoginActivity.this, "Tài khoản đã tồn tại. Đăng nhập ngay!", Toast.LENGTH_SHORT).show();
-            }
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 
@@ -83,16 +79,28 @@ public class LoginActivity extends AppCompatActivity {
         txtPassword.setSelection(txtPassword.getText().length());
     }
 
-    private void performLogin(String phone, String password) {
-        User user = dbHelper.checkLogin(phone, password);
+    private void performLogin(String input, String password) {
+        // Admin credentials: username "admin" OR SĐT "0999999999" with password "admin" or "123456"
+        if (("admin".equalsIgnoreCase(input) || "0999999999".equals(input)) &&
+                ("admin".equalsIgnoreCase(password) || "123456".equals(password))) {
+            User adminUser = new User("admin_id", "Quản trị viên FoodNow", "0999999999", 9999);
+            sessionManager.createLoginSession(adminUser, true);
+            Toast.makeText(this, "Đăng nhập tài khoản Quản trị viên thành công!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginActivity.this, AdminDashboardActivity.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
+
+        User user = dbHelper.checkLogin(input, password);
         if (user != null) {
-            sessionManager.createLoginSession(user);
+            sessionManager.createLoginSession(user, false);
             Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
         } else {
-            Toast.makeText(this, "Số điện thoại hoặc mật khẩu không đúng", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Số điện thoại / tên đăng nhập hoặc mật khẩu không đúng", Toast.LENGTH_SHORT).show();
         }
     }
 }

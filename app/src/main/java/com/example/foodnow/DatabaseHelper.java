@@ -227,15 +227,67 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_CART + " (user_id, food_id, food_name, quantity, selected_toppings, total_price) VALUES ('1', '101', 'Trà Sữa Trân Châu', 1, '50% đường • đá bình thường', 35000)");
         db.execSQL("INSERT INTO " + TABLE_CART + " (user_id, food_id, food_name, quantity, selected_toppings, total_price) VALUES ('1', '102', 'Gà Rán Giòn', 1, '2 miếng • Sốt cay ngọt', 45000)");
 
-        // Vouchers with min_spend and discount_value
         db.execSQL("INSERT INTO " + TABLE_VOUCHERS + " VALUES ('v1', 'Giảm 50.000đ', 'Đơn từ 150.000đ • Tất cả nhà hàng', '20/10/2025', 'FOODNOW50', 'Giảm giá', 150000, 50000)");
         db.execSQL("INSERT INTO " + TABLE_VOUCHERS + " VALUES ('v2', 'Freeship 25.000đ', 'Đơn từ 80.000đ • Trong 5km', '25/10/2025', 'FREESHIP25', 'Freeship', 80000, 25000)");
         db.execSQL("INSERT INTO " + TABLE_VOUCHERS + " VALUES ('v3', 'Giảm 50.000đ', 'Đơn từ 100.000đ • Chicken House', '15/11/2025', 'CHICKEN50', 'Giảm giá', 100000, 50000)");
 
-        db.execSQL("INSERT INTO " + TABLE_ORDERS + " VALUES ('NF651025', '1', 'Chicken House - Quận 1', '1x Gà Rán Giòn (2 miếng - Sốt cay ngọt)', 'Đã hoàn thành', 60000, '07/10/2025 • 13:02', 'Ví MoMo', 'Quận 1, TP.HCM')");
+        db.execSQL("INSERT INTO " + TABLE_ORDERS + " VALUES ('NF651025', '1', 'Chicken House - Quận 1', '1x Gà Rán Giòn (2 miếng - Sốt cay ngọt)', 'Đang đến', 60000, 'Hôm nay • 13:02', 'Ví MoMo', 'Quận 1, TP.HCM')");
 
         db.execSQL("INSERT INTO " + TABLE_ADDRESSES + " VALUES ('addr_1', '1', '🏠 Nhà riêng', '82 Nguyễn Thị Minh Khai, Phường 6, Quận 3, TP.HCM', 'Ngọc Như', '0901234567', 1)");
         db.execSQL("INSERT INTO " + TABLE_ADDRESSES + " VALUES ('addr_2', '1', '🏢 Công ty', '227 Nguyễn Văn Cừ, Phường 4, Quận 5, TP.HCM', 'Ngọc Như', '0901234567', 0)");
+    }
+
+    // ==================== ADMIN OPERATIONS ====================
+    public boolean addFood(Food food) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_FOOD_ID, food.getId());
+        values.put(COL_FOOD_NAME, food.getName());
+        values.put(COL_FOOD_DESC, food.getDescription());
+        values.put(COL_FOOD_PRICE, food.getPrice());
+        values.put(COL_FOOD_IMAGE, food.getImageUrl());
+        values.put(COL_FOOD_RATING, food.getRating());
+        values.put(COL_FOOD_CAT_ID, food.getCategoryId());
+        values.put(COL_FOOD_REST_NAME, food.getRestaurantName());
+        values.put(COL_FOOD_DISTANCE, food.getDistance());
+        values.put(COL_FOOD_DELIVERY, food.getDeliveryTime());
+
+        long result = db.insert(TABLE_FOODS, null, values);
+        return result != -1;
+    }
+
+    public boolean deleteFood(String foodId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        int count = db.delete(TABLE_FOODS, COL_FOOD_ID + "=?", new String[]{foodId});
+        return count > 0;
+    }
+
+    public List<Order> getAllOrdersAdmin() {
+        List<Order> list = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_ORDERS, null);
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                list.add(new Order(
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_ID)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_RESTAURANT)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_SUMMARY)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_STATUS)),
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(COL_ORDER_AMOUNT)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_DATE))
+                ));
+            }
+            cursor.close();
+        }
+        return list;
+    }
+
+    public boolean updateOrderStatus(String orderId, String newStatus) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COL_ORDER_STATUS, newStatus);
+        int rows = db.update(TABLE_ORDERS, values, COL_ORDER_ID + "=?", new String[]{orderId});
+        return rows > 0;
     }
 
     // ==================== USER OPERATIONS ====================

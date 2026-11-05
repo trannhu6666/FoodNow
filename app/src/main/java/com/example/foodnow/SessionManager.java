@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 public class SessionManager {
     private static final String PREF_NAME = "FoodNowSession";
     private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
+    private static final String KEY_IS_ADMIN = "isAdmin";
     private static final String KEY_USER_ID = "userId";
     private static final String KEY_USER_NAME = "userName";
     private static final String KEY_USER_PHONE = "userPhone";
@@ -20,7 +21,13 @@ public class SessionManager {
     }
 
     public void createLoginSession(User user) {
+        boolean isAdmin = "admin".equalsIgnoreCase(user.getPhone());
+        createLoginSession(user, isAdmin);
+    }
+
+    public void createLoginSession(User user, boolean isAdmin) {
         editor.putBoolean(KEY_IS_LOGGED_IN, true);
+        editor.putBoolean(KEY_IS_ADMIN, isAdmin);
         editor.putString(KEY_USER_ID, user.getId());
         editor.putString(KEY_USER_NAME, user.getName());
         editor.putString(KEY_USER_PHONE, user.getPhone());
@@ -30,6 +37,10 @@ public class SessionManager {
 
     public boolean isLoggedIn() {
         return pref.getBoolean(KEY_IS_LOGGED_IN, false);
+    }
+
+    public boolean isAdmin() {
+        return pref.getBoolean(KEY_IS_ADMIN, false);
     }
 
     public User getLoggedInUser() {

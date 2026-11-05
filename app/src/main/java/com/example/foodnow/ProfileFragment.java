@@ -1,18 +1,20 @@
 package com.example.foodnow;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class ProfileFragment extends Fragment {
 
@@ -94,40 +96,44 @@ public class ProfileFragment extends Fragment {
     private void showRedeemVoucherDialog() {
         if (getContext() == null || currentUser == null) return;
 
-        String[] options = {
-                "🎁 Mã giảm 30.000đ (Cần 500 điểm)",
-                "🎁 Mã Freeship 25.000đ (Cần 800 điểm)",
-                "🎁 Mã giảm 50.000đ (Cần 1000 điểm)"
-        };
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(requireContext());
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_redeem_voucher, null);
+        bottomSheetDialog.setContentView(dialogView);
 
-        new AlertDialog.Builder(getContext())
-                .setTitle("Đổi điểm nhận Voucher (Đang có " + currentUser.getPoints() + " điểm)")
-                .setItems(options, (dialog, which) -> {
-                    int cost = which == 0 ? 500 : (which == 1 ? 800 : 1000);
-                    String title = which == 0 ? "Giảm 30.000đ" : (which == 1 ? "Freeship 25.000đ" : "Giảm 50.000đ");
-                    String desc = which == 0 ? "Đổi bằng 500 điểm • Đơn từ 100k" : (which == 1 ? "Đổi bằng 800 điểm • Freeship" : "Đổi bằng 1000 điểm • Đơn từ 150k");
-                    String code = which == 0 ? "DIEM30" : (which == 1 ? "FREESHIP800" : "DIEM50");
-                    String type = which == 1 ? "Freeship" : "Giảm giá";
-                    double minSpend = which == 0 ? 100000.0 : (which == 1 ? 80000.0 : 150000.0);
-                    double discVal = which == 0 ? 30000.0 : (which == 1 ? 25000.0 : 50000.0);
+        ImageButton btnCloseDialog = dialogView.findViewById(R.id.btnCloseDialog);
+        TextView tvUserPointsBalance = dialogView.findViewById(R.id.tvUserPointsBalance);
+        Button btnRedeem500 = dialogView.findViewById(R.id.btnRedeem500);
+        Button btnRedeem800 = dialogView.findViewById(R.id.btnRedeem800);
+        Button btnRedeem1000 = dialogView.findViewById(R.id.btnRedeem1000);
 
-                    if (currentUser.getPoints() >= cost) {
-                        int remainingPoints = currentUser.getPoints() - cost;
-                        currentUser.setPoints(remainingPoints);
-                        sessionManager.createLoginSession(currentUser);
-                        dbHelper.updateUserPoints(currentUser.getId(), remainingPoints);
+        btnCloseDialog.setOnClickListener(v -> bottomSheetDialog.dismiss());
+        if (tvUserPointsBalance != null) {
+            tvUserPointsBalance.setText("Điểm tích lũy hiện có: " + currentUser.getPoints() + " điểm");
+        }
 
-                        Voucher newVoucher = new Voucher("v_" + System.currentTimeMillis(), title, desc, "31/12/2025", code, type, minSpend, discVal);
-                        dbHelper.insertVoucher(newVoucher);
+        btnRedeem500.setOnClickListener(v -> redeemPoints(500, "Giảm 30.000đ", "Đổi bằng 500 điểm • Đơn từ 100k", "DIEM30", "Giảm giá", 100000, 30000, bottomSheetDialog));
+        btnRedeem800.setOnClickListener(v -> redeemPoints(800, "Freeship 25.000đ", "Đổi bằng 800 điểm • Freeship", "FREESHIP800", "Freeship", 80000, 25000, bottomSheetDialog));
+        btnRedeem1000.setOnClickListener(v -> redeemPoints(1000, "Giảm 50.000đ", "Đổi bằng 1000 điểm • Đơn từ 150k", "DIEM50", "Giảm giá", 150000, 50000, bottomSheetDialog));
 
-                        Toast.makeText(getContext(), "Đổi voucher " + code + " thành công! Đã thêm vào Ưu đãi.", Toast.LENGTH_LONG).show();
-                        bindUserData(currentUser);
-                    } else {
-                        Toast.makeText(getContext(), "Bạn không đủ điểm! Đang có " + currentUser.getPoints() + " điểm.", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .setNegativeButton("Đóng", null)
-                .show();
+        bottomSheetDialog.show();
+    }
+
+    private void redeemPoints(int cost, String title, String desc, String code, String type, double minSpend, double discountVal, BottomSheetDialog dialog) {
+        if (currentUser.getPoints() >= cost) {
+            int remainingPoints = currentUser.getPoints() - cost;
+            currentUser.setPoints(remainingPoints);
+            sessionManager.createLoginSession(currentUser);
+            dbHelper.updateUserPoints(currentUser.getId(), remainingPoints);
+
+            Voucher newVoucher = new Voucher("v_" + System.currentTimeMillis(), title, desc, "31/12/2025", code, type, minSpend, discountVal);
+            dbHelper.insertVoucher(newVoucher);
+
+            Toast.makeText(getContext(), "Đổi voucher " + code + " thành công! Đã thêm vào Ưu đãi.", Toast.LENGTH_LONG).show();
+            bindUserData(currentUser);
+            dialog.dismiss();
+        } else {
+            Toast.makeText(getContext(), "Bạn chưa đủ điểm! Cần " + cost + " điểm (Hiện có " + currentUser.getPoints() + " điểm).", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

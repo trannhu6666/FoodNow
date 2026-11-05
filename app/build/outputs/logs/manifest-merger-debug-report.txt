@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:2:1-41:12
-INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:2:1-41:12
-INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:2:1-41:12
-INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:2:1-41:12
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:2:1-46:12
+INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:2:1-46:12
 MERGED from [com.google.android.material:material:1.14.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/7a1eb34faf36344793f0fd5c52654f6e/transformed/material-1.14.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/aa5e51655887c10eef14d250af541eb9/transformed/constraintlayout-2.2.2/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.8.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/0db13c0f27783351a81a973c1400b94c/transformed/appcompat-resources-1.8.0/AndroidManifest.xml:2:1-7:12
@@ -79,8 +79,8 @@ MERGED from [com.google.firebase:firebase-database:20.3.0] /home/trannhu6666/.gr
 	android:name
 		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:6:5-39:19
-INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:6:5-39:19
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:6:5-44:19
+INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:6:5-44:19
 MERGED from [com.google.android.material:material:1.14.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/7a1eb34faf36344793f0fd5c52654f6e/transformed/material-1.14.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.14.0] /home/trannhu6666/.gradle/caches/9.5.0/transforms/7a1eb34faf36344793f0fd5c52654f6e/transformed/material-1.14.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.2] /home/trannhu6666/.gradle/caches/9.5.0/transforms/aa5e51655887c10eef14d250af541eb9/transformed/constraintlayout-2.2.2/AndroidManifest.xml:7:5-20
@@ -135,12 +135,12 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/trannhu6666/.gradle/c
 		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:14:9-45
 	android:dataExtractionRules
 		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:8:9-65
-activity#com.example.foodnow.MainActivity
+activity#com.example.foodnow.LoginActivity
 ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:17:9-24:20
 	android:exported
 		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:18:13-41
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:18:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:20:13-23:29
 action#android.intent.action.MAIN
@@ -151,78 +151,108 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:22:27-74
-activity#com.example.foodnow.LoginActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:9-76
+activity#com.example.foodnow.RegisterActivity
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:9-79
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:49-73
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:52-76
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:19-48
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:26:19-51
+activity#com.example.foodnow.MainActivity
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:9-74
+	android:exported
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:48-71
+	android:name
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:19-47
 activity#com.example.foodnow.EditProfileActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:9-82
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:9-82
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:55-79
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:55-79
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:27:19-54
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:19-54
 activity#com.example.foodnow.SavedAddressesActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:9-85
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:9-85
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:58-82
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:58-82
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:28:19-57
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:19-57
 activity#com.example.foodnow.AddAddressActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:9-81
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:9-81
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:54-78
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:54-78
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:29:19-53
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:19-53
 activity#com.example.foodnow.PaymentMethodsActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:9-85
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:9-85
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:58-82
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:58-82
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:30:19-57
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:19-57
 activity#com.example.foodnow.HelpCenterActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:9-81
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:9-81
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:54-78
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:54-78
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:31:19-53
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:19-53
 activity#com.example.foodnow.SettingsActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:9-79
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:9-79
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:52-76
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:52-76
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:32:19-51
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:19-51
 activity#com.example.foodnow.RestaurantProfileActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:9-88
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:9-88
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:61-85
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:61-85
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:33:19-60
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:19-60
 activity#com.example.foodnow.ProductDetailActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:9-84
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:9-84
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:57-81
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:57-81
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:34:19-56
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:19-56
 activity#com.example.foodnow.CartCheckoutActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:9-83
-	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:56-80
-	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:35:19-55
-activity#com.example.foodnow.OrderSuccessActivity
 ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:36:9-83
 	android:exported
 		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:36:56-80
 	android:name
 		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:36:19-55
-activity#com.example.foodnow.OrderDetailActivity
-ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:9-82
+activity#com.example.foodnow.OrderSuccessActivity
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:9-83
 	android:exported
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:55-79
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:56-80
 	android:name
-		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:19-54
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:37:19-55
+activity#com.example.foodnow.OrderDetailActivity
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:38:9-82
+	android:exported
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:38:55-79
+	android:name
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:38:19-54
+activity#com.example.foodnow.AdminDashboardActivity
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:39:9-85
+	android:exported
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:39:58-82
+	android:name
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:39:19-57
+activity#com.example.foodnow.AdminFoodsActivity
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:40:9-81
+	android:exported
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:40:54-78
+	android:name
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:40:19-53
+activity#com.example.foodnow.AdminOrdersActivity
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:41:9-82
+	android:exported
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:41:55-79
+	android:name
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:41:19-54
+activity#com.example.foodnow.AdminVouchersActivity
+ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:42:9-84
+	android:exported
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:42:57-81
+	android:name
+		ADDED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml:42:19-56
 uses-sdk
 INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/trannhu6666/Downloads/Android/FoodNow/app/src/main/AndroidManifest.xml

@@ -35,8 +35,8 @@ public class HomeFragment extends Fragment implements FoodAdapter.OnFoodItemClic
     private List<Category> categoryList;
     private List<Food> allFoodList;
     private EditText etSearch;
-    private TextView tvSeeAllRecommended;
-    private View btnCartHeader;
+    private TextView tvLocation, tvSeeAllRecommended;
+    private View btnCartHeader, layoutLocationHeader;
     private DatabaseHelper dbHelper;
 
     private DatabaseReference categoriesRef, foodsRef;
@@ -51,8 +51,17 @@ public class HomeFragment extends Fragment implements FoodAdapter.OnFoodItemClic
         rvCategories = view.findViewById(R.id.rvCategories);
         rvRecommendedFoods = view.findViewById(R.id.rvRecommendedFoods);
         etSearch = view.findViewById(R.id.etSearch);
+        tvLocation = view.findViewById(R.id.tvLocation);
         tvSeeAllRecommended = view.findViewById(R.id.tvSeeAllRecommended);
         btnCartHeader = view.findViewById(R.id.btnCartHeader);
+
+        layoutLocationHeader = tvLocation != null ? (View) tvLocation.getParent().getParent() : null;
+        if (layoutLocationHeader != null) {
+            layoutLocationHeader.setOnClickListener(v -> {
+                Intent intent = new Intent(getActivity(), SavedAddressesActivity.class);
+                startActivity(intent);
+            });
+        }
 
         allFoodList = new ArrayList<>();
         categoryList = new ArrayList<>();
@@ -115,6 +124,18 @@ public class HomeFragment extends Fragment implements FoodAdapter.OnFoodItemClic
         fetchFoodsFromFirebase();
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (dbHelper != null && tvLocation != null && getContext() != null) {
+            SessionManager sessionManager = new SessionManager(requireContext());
+            Address defaultAddr = dbHelper.getDefaultAddress(sessionManager.getUserId());
+            if (defaultAddr != null) {
+                tvLocation.setText(defaultAddr.getTitle() + " (" + defaultAddr.getFullAddress() + ")");
+            }
+        }
     }
 
     private void filterSearch(String query) {

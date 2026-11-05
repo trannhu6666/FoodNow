@@ -50,9 +50,12 @@
 
             <!-- Location & ETA Header Card -->
             <LinearLayout
+                android:id="@+id/layoutDeliveryAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:padding="16dp">
@@ -66,13 +69,21 @@
 
                 <TextView
                     android:id="@+id/tvDeliveryLocation"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
-                    android:text="Giao đến Quận 1, TP.HCM • 20-30 phút"
+                    android:layout_weight="1"
+                    android:text="Giao đến 🏠 Nhà riêng (82 Nguyễn Thị Minh Khai...)"
                     android:textColor="@color/text_dark"
                     android:textSize="14sp"
                     android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="Arrow"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="@color/text_grey" />
             </LinearLayout>
 
             <!-- Cart Items Section -->

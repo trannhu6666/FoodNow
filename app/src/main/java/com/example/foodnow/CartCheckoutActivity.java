@@ -24,7 +24,7 @@ public class CartCheckoutActivity extends AppCompatActivity {
     private ImageButton btnBack;
     private RecyclerView rvCartItems;
     private CartAdapter cartAdapter;
-    private View btnSelectVoucher;
+    private View btnSelectVoucher, layoutDeliveryAddress;
     private TextView tvDeliveryLocation, tvCartItemsTitle, tvVoucherTitle, tvSubtotal, tvDeliveryFee, tvDiscount, tvTotalAmount;
     private RadioGroup rgPaymentMethod;
     private RadioButton rbMoMo;
@@ -34,6 +34,7 @@ public class CartCheckoutActivity extends AppCompatActivity {
 
     private DatabaseHelper dbHelper;
     private SessionManager sessionManager;
+    private Address selectedDeliveryAddress;
 
     private double subtotal = 0;
     private double deliveryFee = 15000;
@@ -52,6 +53,7 @@ public class CartCheckoutActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
         rvCartItems = findViewById(R.id.rvCartItems);
         btnSelectVoucher = findViewById(R.id.btnSelectVoucher);
+        layoutDeliveryAddress = findViewById(R.id.layoutDeliveryAddress);
         tvDeliveryLocation = findViewById(R.id.tvDeliveryLocation);
         tvCartItemsTitle = findViewById(R.id.tvCartItemsTitle);
         tvVoucherTitle = findViewById(R.id.tvVoucherTitle);
@@ -65,6 +67,10 @@ public class CartCheckoutActivity extends AppCompatActivity {
 
         btnBack.setOnClickListener(v -> finish());
         btnSelectVoucher.setOnClickListener(v -> showVoucherSelectionDialog());
+
+        if (layoutDeliveryAddress != null) {
+            layoutDeliveryAddress.setOnClickListener(v -> showAddressSelectionDialog());
+        }
 
         loadCartFromDatabase();
 
@@ -81,10 +87,68 @@ public class CartCheckoutActivity extends AppCompatActivity {
         super.onResume();
         loadCartFromDatabase();
 
-        Address defaultAddr = dbHelper.getDefaultAddress(sessionManager.getUserId());
-        if (defaultAddr != null && tvDeliveryLocation != null) {
-            tvDeliveryLocation.setText("Giao đến " + defaultAddr.getTitle() + " (" + defaultAddr.getFullAddress() + ")");
+        selectedDeliveryAddress = dbHelper.getDefaultAddress(sessionManager.getUserId());
+        if (selectedDeliveryAddress != null && tvDeliveryLocation != null) {
+            tvDeliveryLocation.setText("Giao đến " + selectedDeliveryAddress.getTitle() + " (" + selectedDeliveryAddress.getFullAddress() + ")");
         }
+    }
+
+    private void showAddressSelectionDialog() {
+        List<Address> addressList = dbHelper.getAddressesByUser(sessionManager.getUserId());
+        if (addressList == null || addressList.isEmpty()) {
+            Toast.makeText(this, "Vui lòng thêm địa chỉ giao hàng!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, AddAddressActivity.class);
+            startActivity(intent);
+            return;
+        }
+
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        View dialogView = getLayoutInflater().inflate(R.layout.dialog_select_address, null);
+        bottomSheetDialog.setContentView(dialogView);
+
+        ImageButton btnCloseDialog = dialogView.findViewById(R.id.btnCloseDialog);
+        RecyclerView rvDialogAddresses = dialogView.findViewById(R.id.rvDialogAddresses);
+        Button btnAddNewAddressDialog = dialogView.findViewById(R.id.btnAddNewAddressDialog);
+
+        btnCloseDialog.setOnClickListener(v -> bottomSheetDialog.dismiss());
+
+        AddressAdapter dialogAdapter = new AddressAdapter(addressList, new AddressAdapter.OnAddressActionListener() {
+            @Override
+            public void onDelete(Address address) {
+                dbHelper.deleteAddress(address.getId());
+                showAddressSelectionDialog();
+            }
+
+            @Override
+            public void onEdit(Address address) {
+                Intent intent = new Intent(CartCheckoutActivity.this, AddAddressActivity.class);
+                intent.putExtra("editAddressId", address.getId());
+                startActivity(intent);
+                bottomSheetDialog.dismiss();
+            }
+
+            @Override
+            public void onSetDefault(Address address) {
+                dbHelper.setDefaultAddress(address.getId(), sessionManager.getUserId());
+                selectedDeliveryAddress = address;
+                if (tvDeliveryLocation != null) {
+                    tvDeliveryLocation.setText("Giao đến " + address.getTitle() + " (" + address.getFullAddress() + ")");
+                }
+                Toast.makeText(CartCheckoutActivity.this, "Đã chọn " + address.getTitle(), Toast.LENGTH_SHORT).show();
+                bottomSheetDialog.dismiss();
+            }
+        });
+
+        rvDialogAddresses.setLayoutManager(new LinearLayoutManager(this));
+        rvDialogAddresses.setAdapter(dialogAdapter);
+
+        btnAddNewAddressDialog.setOnClickListener(v -> {
+            Intent intent = new Intent(CartCheckoutActivity.this, AddAddressActivity.class);
+            startActivity(intent);
+            bottomSheetDialog.dismiss();
+        });
+
+        bottomSheetDialog.show();
     }
 
     private void showVoucherSelectionDialog() {
@@ -250,13 +314,25 @@ public class CartCheckoutActivity extends AppCompatActivity {
         String summary = cartItemList.size() + " món ngon đã chọn";
         String date = "Hôm nay • " + android.text.format.DateFormat.format("HH:mm", new java.util.Date());
 
-        Address defaultAddr = dbHelper.getDefaultAddress(sessionManager.getUserId());
+        Address defaultAddr = selectedDeliveryAddress != null ? selectedDeliveryAddress : dbHelper.getDefaultAddress(sessionManager.getUserId());
         String addressText = defaultAddr != null ? defaultAddr.getFullAddress() : "Quận 1, TP.HCM";
 
         Order order = new Order(orderId, "Chicken House - Quận 1", summary, "Đang đến", finalTotal, date);
         boolean created = dbHelper.createOrder(order, sessionManager.getUserId(), payment, addressText);
 
         if (created) {
+            // Loyalty points earning rule: +10 points for orders >= 100,000đ
+            if (finalTotal >= 100000) {
+                User user = sessionManager.getLoggedInUser();
+                if (user != null) {
+                    int newPoints = user.getPoints() + 10;
+                    user.setPoints(newPoints);
+                    sessionManager.createLoginSession(user);
+                    dbHelper.updateUserPoints(user.getId(), newPoints);
+                    Toast.makeText(this, "Đơn hàng trên 100.000đ: Bạn được cộng +10 điểm tích lũy!", Toast.LENGTH_LONG).show();
+                }
+            }
+
             Intent intent = new Intent(CartCheckoutActivity.this, OrderSuccessActivity.class);
             startActivity(intent);
             finish();

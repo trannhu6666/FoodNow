@@ -15,7 +15,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="true" />
         <activity android:name=".EditProfileActivity" android:exported="false" />
         <activity android:name=".SavedAddressesActivity" android:exported="false" />
         <activity android:name=".AddAddressActivity" android:exported="false" />
@@ -35,6 +36,10 @@
         <activity android:name=".CartCheckoutActivity" android:exported="false" />
         <activity android:name=".OrderSuccessActivity" android:exported="false" />
         <activity android:name=".OrderDetailActivity" android:exported="false" />
+        <activity android:name=".AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".AdminFoodsActivity" android:exported="false" />
+        <activity android:name=".AdminOrdersActivity" android:exported="false" />
+        <activity android:name=".AdminVouchersActivity" android:exported="false" />
 
     </application>
 
