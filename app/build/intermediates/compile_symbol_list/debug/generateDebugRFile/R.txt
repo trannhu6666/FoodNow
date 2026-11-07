@@ -12,6 +12,7 @@ int color text_dark 0x0
 int color text_grey 0x0
 int color text_medium 0x0
 int color white 0x0
+int drawable bg_banner_gradient 0x0
 int drawable bg_bottom_sheet 0x0
 int drawable bg_button_outline 0x0
 int drawable bg_button_pink 0x0
@@ -84,6 +85,7 @@ int id btnAdminEditFood 0x0
 int id btnApplyInputCode 0x0
 int id btnBack 0x0
 int id btnBackToHome 0x0
+int id btnBannerAction 0x0
 int id btnCallHotline 0x0
 int id btnCartHeader 0x0
 int id btnChangePassword 0x0
@@ -151,7 +153,7 @@ int id fabAddVoucher 0x0
 int id fragment_container 0x0
 int id ivAvatar 0x0
 int id ivAvatarEdit 0x0
-int id ivBanner 0x0
+int id ivBannerArt 0x0
 int id ivCartItemImage 0x0
 int id ivCategoryIcon 0x0
 int id ivCoverPhoto 0x0
@@ -160,6 +162,7 @@ int id ivFoodImage 0x0
 int id ivLogo 0x0
 int id ivMenuItemImage 0x0
 int id ivOrderFoodImage 0x0
+int id layoutBannerRoot 0x0
 int id layoutBottomBar 0x0
 int id layoutDeliveryAddress 0x0
 int id layoutHeader 0x0
@@ -198,6 +201,8 @@ int id tabLayoutOrders 0x0
 int id tabLayoutVouchers 0x0
 int id tvAddFoodTitle 0x0
 int id tvAddressTitle 0x0
+int id tvBannerDesc 0x0
+int id tvBannerTitle 0x0
 int id tvCartItemName 0x0
 int id tvCartItemOptions 0x0
 int id tvCartItemPrice 0x0
@@ -262,6 +267,7 @@ int id txtRegisterConfirmPassword 0x0
 int id txtRegisterName 0x0
 int id txtRegisterPassword 0x0
 int id txtRegisterPhone 0x0
+int id viewPagerBanner 0x0
 int layout activity_add_address 0x0
 int layout activity_admin_dashboard 0x0
 int layout activity_admin_foods 0x0
@@ -290,6 +296,7 @@ int layout fragment_order_history 0x0
 int layout fragment_profile 0x0
 int layout fragment_vouchers 0x0
 int layout item_admin_food 0x0
+int layout item_banner 0x0
 int layout item_cart 0x0
 int layout item_category 0x0
 int layout item_food_recommend 0x0

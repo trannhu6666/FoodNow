@@ -13,7 +13,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "FoodNow.db";
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 10;
 
     // Users table
     private static final String TABLE_USERS = "users";
@@ -224,17 +224,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO " + TABLE_FOODS + " VALUES ('107', 'Cơm Tấm Sườn Bì Chả Special', 'Sườn nướng mật ong, bì giòn, chả trứng hấp kèm nước mắm kẹo', 48000, 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500', 4.8, '6', 'Cơm Tấm Ba Cường - Quận 1', '1.0 km', '20 phút')");
         db.execSQL("INSERT INTO " + TABLE_FOODS + " VALUES ('108', 'Cà Phê Sữa Đá Phin Đậm Đà', 'Cà phê nguyên chất pha phin truyền thống kết hợp sữa đặc béo ngọt', 29000, 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500', 4.7, '7', 'Highlands Coffee - Quận 1', '600 m', '12 phút')");
 
-        db.execSQL("INSERT INTO " + TABLE_CART + " (user_id, food_id, food_name, quantity, selected_toppings, total_price) VALUES ('1', '101', 'Trà Sữa Trân Châu', 1, '50% đường • đá bình thường', 35000)");
-        db.execSQL("INSERT INTO " + TABLE_CART + " (user_id, food_id, food_name, quantity, selected_toppings, total_price) VALUES ('1', '102', 'Gà Rán Giòn', 1, '2 miếng • Sốt cay ngọt', 45000)");
-
         db.execSQL("INSERT INTO " + TABLE_VOUCHERS + " VALUES ('v1', 'Giảm 50.000đ', 'Đơn từ 150.000đ • Tất cả nhà hàng', '20/10/2025', 'FOODNOW50', 'Giảm giá', 150000, 50000)");
         db.execSQL("INSERT INTO " + TABLE_VOUCHERS + " VALUES ('v2', 'Freeship 25.000đ', 'Đơn từ 80.000đ • Trong 5km', '25/10/2025', 'FREESHIP25', 'Freeship', 80000, 25000)");
         db.execSQL("INSERT INTO " + TABLE_VOUCHERS + " VALUES ('v3', 'Giảm 50.000đ', 'Đơn từ 100.000đ • Chicken House', '15/11/2025', 'CHICKEN50', 'Giảm giá', 100000, 50000)");
 
         db.execSQL("INSERT INTO " + TABLE_ORDERS + " VALUES ('NF651025', '1', 'Chicken House - Quận 1', '1x Gà Rán Giòn (2 miếng - Sốt cay ngọt)', 'Đang đến', 60000, 'Hôm nay • 13:02', 'Ví MoMo', 'Quận 1, TP.HCM')");
-
-        db.execSQL("INSERT INTO " + TABLE_ADDRESSES + " VALUES ('addr_1', '1', '🏠 Nhà riêng', '82 Nguyễn Thị Minh Khai, Phường 6, Quận 3, TP.HCM', 'Ngọc Như', '0901234567', 1)");
-        db.execSQL("INSERT INTO " + TABLE_ADDRESSES + " VALUES ('addr_2', '1', '🏢 Công ty', '227 Nguyễn Văn Cừ, Phường 4, Quận 5, TP.HCM', 'Ngọc Như', '0901234567', 0)");
     }
 
     // ==================== ADMIN OPERATIONS ====================
@@ -290,6 +284,60 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return rows > 0;
     }
 
+    public boolean completeOrderAndAddPoints(String orderId, String userId, double totalAmount) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.beginTransaction();
+        try {
+            ContentValues orderValues = new ContentValues();
+            orderValues.put(COL_ORDER_STATUS, "Đã hoàn thành");
+            db.update(TABLE_ORDERS, orderValues, COL_ORDER_ID + " = ?", new String[]{orderId});
+
+            if (totalAmount >= 100000) {
+                Cursor cursor = db.rawQuery("SELECT " + COL_USER_POINTS + " FROM " + TABLE_USERS + " WHERE " + COL_USER_ID + " = ?", new String[]{userId});
+                int currentPoints = 0;
+                if (cursor.moveToFirst()) {
+                    currentPoints = cursor.getInt(0);
+                }
+                cursor.close();
+
+                ContentValues userValues = new ContentValues();
+                userValues.put(COL_USER_POINTS, currentPoints + 10);
+                db.update(TABLE_USERS, userValues, COL_USER_ID + " = ?", new String[]{userId});
+            }
+
+            db.setTransactionSuccessful();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            db.endTransaction();
+        }
+    }
+
+    public List<Order> getCompletedOrdersByUser(String userId) {
+        List<Order> orderList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String query = "SELECT * FROM " + TABLE_ORDERS + " WHERE " + COL_ORDER_USER_ID + " = ? AND (" + COL_ORDER_STATUS + " = 'Đã hoàn thành' OR " + COL_ORDER_STATUS + " = 'COMPLETED')";
+        Cursor cursor = db.rawQuery(query, new String[]{userId});
+
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                orderList.add(new Order(
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_ID)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_RESTAURANT)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_SUMMARY)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_STATUS)),
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(COL_ORDER_AMOUNT)),
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_ORDER_DATE))
+                ));
+            }
+            cursor.close();
+        }
+        return orderList;
+    }
+
     // ==================== USER OPERATIONS ====================
     public User checkLogin(String phone, String password) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -305,11 +353,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return user;
         }
         if (cursor != null) cursor.close();
-
-        if (!phone.isEmpty() && !password.isEmpty()) {
-            return new User("1", "Ngọc Như", phone, 1200);
-        }
-        return null;
+        return null; // Strict check: no fallback mock login!
     }
 
     public boolean registerUser(String name, String phone, String password) {
@@ -398,7 +442,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return address;
         }
         if (cursor != null) cursor.close();
-        return new Address("addr_1", "🏠 Nhà riêng", "82 Nguyễn Thị Minh Khai, Phường 6, Quận 3, TP.HCM", "Ngọc Như", "0901234567", true);
+
+        Cursor cursorAll = db.rawQuery("SELECT * FROM " + TABLE_ADDRESSES + " WHERE " + COL_ADDR_USER_ID + "=?", new String[]{userId});
+        if (cursorAll.moveToFirst()) {
+            Address address = new Address(
+                    cursorAll.getString(cursorAll.getColumnIndexOrThrow(COL_ADDR_ID)),
+                    cursorAll.getString(cursorAll.getColumnIndexOrThrow(COL_ADDR_TITLE)),
+                    cursorAll.getString(cursorAll.getColumnIndexOrThrow(COL_ADDR_FULL)),
+                    cursorAll.getString(cursorAll.getColumnIndexOrThrow(COL_ADDR_NAME)),
+                    cursorAll.getString(cursorAll.getColumnIndexOrThrow(COL_ADDR_PHONE)),
+                    true
+            );
+            cursorAll.close();
+            return address;
+        }
+        cursorAll.close();
+
+        return null; // Returns null if user has no saved addresses!
     }
 
     public boolean addAddress(Address address, String userId) {

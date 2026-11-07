@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -12,12 +13,15 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDetailActivity extends AppCompatActivity {
 
     private ImageButton btnBack, btnShare, btnDecreaseQty, btnIncreaseQty;
+    private ImageView ivFoodDetailImage;
     private TextView tvFoodTitle, tvFoodRating, tvFoodPrice, tvFoodDescription, tvQuantity;
     private CheckBox cbTopping1, cbTopping2, cbTopping3;
     private RadioGroup rgSugarLevel, rgIceLevel;
@@ -59,6 +63,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         btnShare = findViewById(R.id.btnShare);
         btnDecreaseQty = findViewById(R.id.btnDecreaseQty);
         btnIncreaseQty = findViewById(R.id.btnIncreaseQty);
+        ivFoodDetailImage = findViewById(R.id.ivFoodDetailImage);
 
         tvFoodTitle = findViewById(R.id.tvFoodTitle);
         tvFoodRating = findViewById(R.id.tvFoodRating);
@@ -91,6 +96,20 @@ public class ProductDetailActivity extends AppCompatActivity {
             tvFoodRating.setText(String.valueOf(currentFood.getRating()));
             tvFoodPrice.setText(String.format("%,.0fđ", currentFood.getPrice()));
             tvFoodDescription.setText(currentFood.getDescription());
+
+            int localDrawable = getFoodDrawableRes(foodId);
+            if (currentFood.getImageUrl() != null && !currentFood.getImageUrl().trim().isEmpty()) {
+                Glide.with(this)
+                        .load(currentFood.getImageUrl())
+                        .placeholder(localDrawable != 0 ? localDrawable : R.drawable.ic_food_placeholder)
+                        .error(localDrawable != 0 ? localDrawable : R.drawable.ic_food_placeholder)
+                        .centerCrop()
+                        .into(ivFoodDetailImage);
+            } else if (localDrawable != 0) {
+                ivFoodDetailImage.setImageResource(localDrawable);
+            } else {
+                ivFoodDetailImage.setImageResource(R.drawable.ic_food_placeholder);
+            }
         }
 
         btnBack.setOnClickListener(v -> finish());
@@ -131,6 +150,30 @@ public class ProductDetailActivity extends AppCompatActivity {
         });
 
         calculateCurrentPrice();
+    }
+
+    private int getFoodDrawableRes(String id) {
+        if (id == null) return 0;
+        switch (id) {
+            case "101": return R.drawable.ic_food_milktea;
+            case "102": return R.drawable.ic_food_chicken;
+            case "103": return R.drawable.ic_food_combo;
+            case "104": return R.drawable.ic_food_fries;
+            case "105": return R.drawable.ic_food_banhmi;
+            case "106": return R.drawable.ic_food_pho;
+            case "107": return R.drawable.ic_food_comtam;
+            case "108": return R.drawable.ic_food_coffee;
+            case "109": return R.drawable.ic_food_trasua_thaido;
+            case "110": return R.drawable.ic_food_matcha;
+            case "111": return R.drawable.ic_food_chicken;
+            case "112": return R.drawable.ic_food_bunbo;
+            case "113": return R.drawable.ic_food_bundau;
+            case "114": return R.drawable.ic_food_banhmipate;
+            case "115": return R.drawable.ic_food_banhmixiumai;
+            case "116": return R.drawable.ic_food_nemchua;
+            case "117": return R.drawable.ic_food_banhtrang;
+            default: return 0;
+        }
     }
 
     private void setupFoodCategoryOptions() {

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_fragment_vouchers.xml.flat",
-        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/layout/fragment_vouchers.xml"
-    },
-    {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_dialog_select_voucher.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/layout/dialog_select_voucher.xml"
+    },
+    {
+        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_fragment_vouchers.xml.flat",
+        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/layout/fragment_vouchers.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_logo.xml.flat",
@@ -40,12 +40,12 @@
         "source": "com.example.foodnow.app-main-47:/layout/fragment_home.xml"
     },
     {
-        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_fragment_order_history.xml.flat",
-        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/layout/fragment_order_history.xml"
-    },
-    {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_food_chicken.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_food_chicken.xml"
+    },
+    {
+        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_fragment_order_history.xml.flat",
+        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/layout/fragment_order_history.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_item_admin_food.xml.flat",
@@ -68,12 +68,12 @@
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_food_coffee.xml"
     },
     {
-        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_activity_admin_orders.xml.flat",
-        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/layout/activity_admin_orders.xml"
-    },
-    {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_item_cart.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/layout/item_cart.xml"
+    },
+    {
+        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_activity_admin_orders.xml.flat",
+        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/layout/activity_admin_orders.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_bg_chip_pink.xml.flat",
@@ -86,6 +86,10 @@
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_voucher.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_voucher.xml"
+    },
+    {
+        "merged": "com.example.foodnow.app-debug-45:/layout_item_banner.xml.flat",
+        "source": "com.example.foodnow.app-main-47:/layout/item_banner.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_bg_edittext.xml.flat",
@@ -104,24 +108,24 @@
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_cat_anvat.xml"
     },
     {
-        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_check_circle.xml.flat",
-        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_check_circle.xml"
-    },
-    {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_food_combo.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_food_combo.xml"
+    },
+    {
+        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_check_circle.xml.flat",
+        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_check_circle.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_cart.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_cart.xml"
     },
     {
-        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_food_banhmixiumai.xml.flat",
-        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_food_banhmixiumai.xml"
-    },
-    {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_cat_bunpho.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_cat_bunpho.xml"
+    },
+    {
+        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_food_banhmixiumai.xml.flat",
+        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_food_banhmixiumai.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_food_banhtrang.xml.flat",
@@ -160,8 +164,16 @@
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_food_matcha.xml"
     },
     {
+        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_banner_promo.xml.flat",
+        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_banner_promo.xml"
+    },
+    {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_food_bunbo.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_food_bunbo.xml"
+    },
+    {
+        "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_dialog_redeem_voucher.xml.flat",
+        "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/layout/dialog_redeem_voucher.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/layout_fragment_profile.xml.flat",
@@ -178,10 +190,6 @@
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_banner_placeholder.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_banner_placeholder.xml"
-    },
-    {
-        "merged": "com.example.foodnow.app-debug-45:/drawable_ic_banner_promo.xml.flat",
-        "source": "com.example.foodnow.app-main-47:/drawable/ic_banner_promo.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_food_bundau.xml.flat",
@@ -250,10 +258,6 @@
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_location.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/drawable/ic_location.xml"
-    },
-    {
-        "merged": "com.example.foodnow.app-debug-45:/layout_dialog_redeem_voucher.xml.flat",
-        "source": "com.example.foodnow.app-main-47:/layout/dialog_redeem_voucher.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_home.xml.flat",
@@ -362,6 +366,10 @@
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/xml_data_extraction_rules.xml.flat",
         "source": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-main-47:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.foodnow.app-debug-45:/drawable_bg_banner_gradient.xml.flat",
+        "source": "com.example.foodnow.app-main-47:/drawable/bg_banner_gradient.xml"
     },
     {
         "merged": "/home/trannhu6666/.gradle/daemon/9.5.0/com.example.foodnow.app-debug-45:/drawable_ic_back.xml.flat",

@@ -1,4 +1,4 @@
-#Thu Nov 05 13:07:08 GMT+07:00 2026
+#Sat Nov 07 14:41:02 GMT+07:00 2026
 base.0=/home/trannhu6666/Downloads/Android/FoodNow/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/home/trannhu6666/Downloads/Android/FoodNow/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.2=/home/trannhu6666/Downloads/Android/FoodNow/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex

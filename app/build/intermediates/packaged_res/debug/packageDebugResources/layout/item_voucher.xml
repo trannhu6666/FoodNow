@@ -34,11 +34,11 @@
                 android:layout_marginTop="4dp"
                 android:text="COUPON"
                 android:textColor="@color/primary_pink"
-                android:textSize="9sp"
+                android:textSize="10sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Divider Dotted Line Effect -->
+        <!-- Divider Line -->
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"

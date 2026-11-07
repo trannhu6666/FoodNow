@@ -75,7 +75,7 @@ public class OrderHistoryFragment extends Fragment implements OrderHistoryAdapte
             }
         } else if ("Lịch sử".equalsIgnoreCase(tabFilter)) {
             for (Order o : allOrderList) {
-                if ("Đã hoàn thành".equalsIgnoreCase(o.getStatus()) || "Đã hủy".equalsIgnoreCase(o.getStatus())) {
+                if ("Đã hoàn thành".equalsIgnoreCase(o.getStatus()) || "COMPLETED".equalsIgnoreCase(o.getStatus()) || "Đã hủy".equalsIgnoreCase(o.getStatus())) {
                     filtered.add(o);
                 }
             }

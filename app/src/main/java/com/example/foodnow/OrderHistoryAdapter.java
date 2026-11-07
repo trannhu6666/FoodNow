@@ -55,6 +55,21 @@ public class OrderHistoryAdapter extends RecyclerView.Adapter<OrderHistoryAdapte
         holder.tvOrderTotalPrice.setText(String.format("%,.0fđ", order.getTotalAmount()));
         holder.tvOrderStatus.setText(order.getStatus());
 
+        String summary = order.getItemsSummary() != null ? order.getItemsSummary().toLowerCase() : "";
+        if (summary.contains("trà sữa")) {
+            holder.ivOrderFoodImage.setImageResource(R.drawable.ic_food_milktea);
+        } else if (summary.contains("gà")) {
+            holder.ivOrderFoodImage.setImageResource(R.drawable.ic_food_chicken);
+        } else if (summary.contains("phở")) {
+            holder.ivOrderFoodImage.setImageResource(R.drawable.ic_food_pho);
+        } else if (summary.contains("bánh mì")) {
+            holder.ivOrderFoodImage.setImageResource(R.drawable.ic_food_banhmi);
+        } else if (summary.contains("cơm")) {
+            holder.ivOrderFoodImage.setImageResource(R.drawable.ic_food_comtam);
+        } else {
+            holder.ivOrderFoodImage.setImageResource(R.drawable.ic_food_combo);
+        }
+
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) listener.onOrderClick(order);
         });

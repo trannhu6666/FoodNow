@@ -14,6 +14,7 @@ color text_dark
 color text_grey
 color text_medium
 color white
+drawable bg_banner_gradient
 drawable bg_bottom_sheet
 drawable bg_button_outline
 drawable bg_button_pink
@@ -86,6 +87,7 @@ id btnAdminEditFood
 id btnApplyInputCode
 id btnBack
 id btnBackToHome
+id btnBannerAction
 id btnCallHotline
 id btnCartHeader
 id btnChangePassword
@@ -153,7 +155,7 @@ id fabAddVoucher
 id fragment_container
 id ivAvatar
 id ivAvatarEdit
-id ivBanner
+id ivBannerArt
 id ivCartItemImage
 id ivCategoryIcon
 id ivCoverPhoto
@@ -162,6 +164,7 @@ id ivFoodImage
 id ivLogo
 id ivMenuItemImage
 id ivOrderFoodImage
+id layoutBannerRoot
 id layoutBottomBar
 id layoutDeliveryAddress
 id layoutHeader
@@ -200,6 +203,8 @@ id tabLayoutOrders
 id tabLayoutVouchers
 id tvAddFoodTitle
 id tvAddressTitle
+id tvBannerDesc
+id tvBannerTitle
 id tvCartItemName
 id tvCartItemOptions
 id tvCartItemPrice
@@ -264,6 +269,7 @@ id txtRegisterConfirmPassword
 id txtRegisterName
 id txtRegisterPassword
 id txtRegisterPhone
+id viewPagerBanner
 layout activity_add_address
 layout activity_admin_dashboard
 layout activity_admin_foods
@@ -292,6 +298,7 @@ layout fragment_order_history
 layout fragment_profile
 layout fragment_vouchers
 layout item_admin_food
+layout item_banner
 layout item_cart
 layout item_category
 layout item_food_recommend

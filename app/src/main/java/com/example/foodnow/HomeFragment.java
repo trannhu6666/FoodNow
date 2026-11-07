@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -37,6 +38,7 @@ public class HomeFragment extends Fragment implements FoodAdapter.OnFoodItemClic
     private EditText etSearch;
     private TextView tvLocation, tvSeeAllRecommended;
     private View btnCartHeader, layoutLocationHeader;
+    private ViewPager2 viewPagerBanner;
     private DatabaseHelper dbHelper;
 
     private DatabaseReference categoriesRef, foodsRef;
@@ -54,6 +56,17 @@ public class HomeFragment extends Fragment implements FoodAdapter.OnFoodItemClic
         tvLocation = view.findViewById(R.id.tvLocation);
         tvSeeAllRecommended = view.findViewById(R.id.tvSeeAllRecommended);
         btnCartHeader = view.findViewById(R.id.btnCartHeader);
+        viewPagerBanner = view.findViewById(R.id.viewPagerBanner);
+
+        if (viewPagerBanner != null) {
+            List<Banner> bannerList = new ArrayList<>();
+            bannerList.add(new Banner("SIÊU TIỆC FOODNOW", "Giảm ngay 50% + Freeship đơn đầu tiên", R.drawable.ic_food_combo));
+            bannerList.add(new Banner("FREESHIP MỌI ĐƠN", "Miễn phí giao hàng toàn quốc trong 5km", R.drawable.ic_food_chicken));
+            bannerList.add(new Banner("TÍCH ĐIỂM ĐỔI QUÀ", "Đổi điểm ngay nhận hàng ngàn voucher khủng", R.drawable.ic_food_milktea));
+
+            BannerAdapter bannerAdapter = new BannerAdapter(bannerList);
+            viewPagerBanner.setAdapter(bannerAdapter);
+        }
 
         layoutLocationHeader = tvLocation != null ? (View) tvLocation.getParent().getParent() : null;
         if (layoutLocationHeader != null) {

@@ -78,6 +78,15 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
             case "106": return R.drawable.ic_food_pho;
             case "107": return R.drawable.ic_food_comtam;
             case "108": return R.drawable.ic_food_coffee;
+            case "109": return R.drawable.ic_food_trasua_thaido;
+            case "110": return R.drawable.ic_food_matcha;
+            case "111": return R.drawable.ic_food_chicken;
+            case "112": return R.drawable.ic_food_bunbo;
+            case "113": return R.drawable.ic_food_bundau;
+            case "114": return R.drawable.ic_food_banhmipate;
+            case "115": return R.drawable.ic_food_banhmixiumai;
+            case "116": return R.drawable.ic_food_nemchua;
+            case "117": return R.drawable.ic_food_banhtrang;
             default: return 0;
         }
     }

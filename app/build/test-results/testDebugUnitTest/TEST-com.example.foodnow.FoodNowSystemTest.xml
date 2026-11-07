@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.foodnow.FoodNowSystemTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-07T08:02:15.704Z" hostname="UwU" time="0.017">
+  <properties/>
+  <testcase name="testSTT4_SearchFood" classname="com.example.foodnow.FoodNowSystemTest" time="0.003"/>
+  <testcase name="testSTT1_ValidLogin" classname="com.example.foodnow.FoodNowSystemTest" time="0.001"/>
+  <testcase name="testSTT5_AddToCart" classname="com.example.foodnow.FoodNowSystemTest" time="0.0"/>
+  <testcase name="testSTT9_ViewOrderHistory" classname="com.example.foodnow.FoodNowSystemTest" time="0.0"/>
+  <testcase name="testSTT8_CreateOrder" classname="com.example.foodnow.FoodNowSystemTest" time="0.001"/>
+  <testcase name="testSTT2_InvalidLogin" classname="com.example.foodnow.FoodNowSystemTest" time="0.0"/>
+  <testcase name="testSTT6_UpdateCartQuantity" classname="com.example.foodnow.FoodNowSystemTest" time="0.0"/>
+  <testcase name="testSTT10_AdminAddFood" classname="com.example.foodnow.FoodNowSystemTest" time="0.0"/>
+  <testcase name="testSTT3_RegisterUser" classname="com.example.foodnow.FoodNowSystemTest" time="0.0"/>
+  <testcase name="testSTT7_ApplyVoucher" classname="com.example.foodnow.FoodNowSystemTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
